@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add dayjs
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add supertest @types/supertest - D
 
 PATH: 
   C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\MinGW\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\ProgramData\ComposerSetup\bin;C:\php-7.4.6;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\natha\AppData\Local\Microsoft\WindowsApps;;C:\Users\natha\.dotnet\tools;C:\Users\natha\AppData\Local\Programs\Microsoft VS Code\bin;D:\Programas\xampp\php;C:\Users\natha\AppData\Local\ComposerSetup\bin;C:\Users\natha\AppData\Roaming\Composer\vendor\bin;C:\Users\natha\AppData\Local\Yarn\bin;C:\Users\natha\AppData\Roaming\npm
@@ -55,6 +55,7 @@ npm manifest:
     "dependencies": {
       "bcryptjs": "^2.4.3",
       "csv-parse": "^4.15.4",
+      "dayjs": "^1.10.5",
       "express": "^4.17.1",
       "express-async-errors": "^3.1.1",
       "jsonwebtoken": "^8.5.1",
@@ -1577,6 +1578,11 @@ Lockfile:
     dependencies:
       get-stdin "^4.0.1"
       meow "^3.3.0"
+  
+  dayjs@^1.10.5:
+    version "1.10.5"
+    resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
+    integrity sha512-BUFis41ikLz+65iH6LHQCDm4YPMj5r1YFLdupPIyM4SGcXMmtiLQ7U37i+hGS8urIuqe7I/ou3IS1jVc4nbN4g==
   
   debug@2.6.9, debug@^2.6.9:
     version "2.6.9"
