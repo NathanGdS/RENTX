@@ -22,8 +22,8 @@ services:
         command: npm run dev
         restart: always
         ports: 
-            - 3333:3333
-            - 9229:9229
+            - 8080:8080
+            - 9230:9230
         volumes: 
             - .:/usr/app
         links: 

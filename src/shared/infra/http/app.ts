@@ -12,8 +12,12 @@ import createConnection from "@shared/infra/typeorm";
 import swaggerFile from "../../../swagger.json";
 import { router } from "./routes";
 
+//import cors from "cors";
+
 createConnection();
 const app = express();
+
+//app.use(cors());
 
 app.use(express.json());
 

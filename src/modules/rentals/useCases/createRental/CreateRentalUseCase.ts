@@ -4,6 +4,7 @@ import { Rental } from "@modules/rentals/infra/typeorm/entities/Rental";
 import { IRentalsRepository } from "@modules/rentals/repositories/IRentalsRepository";
 import { IDateProvider } from "@shared/container/providers/DateProvider/IDateProvider";
 import { AppError } from "@shared/errors/AppError";
+import { ICarsRepository } from "@modules/cars/repositories/ICarsRepository";
 
 interface IRequest {
     user_id: string;
@@ -17,7 +18,9 @@ class CreateRentalUseCase {
         @inject("RentalsRepository")
         private rentalsRepository: IRentalsRepository,
         @inject("DayjsDateProvider")
-        private dateProvider: IDateProvider
+        private dateProvider: IDateProvider,
+        @inject("CarsRepository")
+        private carsRepository: ICarsRepository
     ) {}
 
     async execute({
@@ -43,11 +46,13 @@ class CreateRentalUseCase {
                 "There's a another rental in progress for this user!"
             );
         }
+        console.log(this.dateProvider.dateNow());
+        console.log(expected_return_date);
         const compare = this.dateProvider.compareInHours(
             this.dateProvider.dateNow(),
             expected_return_date
         );
-
+        console.log(compare);
         if (compare < minimumHours) {
             throw new AppError(
                 `The minium hours to a rental it is ${minimumHours} hours!`
@@ -59,6 +64,8 @@ class CreateRentalUseCase {
             car_id,
             expected_return_date,
         });
+
+        await this.carsRepository.updateAvailable(car_id, false);
 
         return rental;
     }

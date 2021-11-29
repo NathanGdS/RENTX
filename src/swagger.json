@@ -8,6 +8,8 @@
             "email":"nathangarsantos@gmail.com"
         }
     },
+    "host": "localhost:3355",
+    "basePath": "/",
     "paths": {
         "/categories": {
             "post": {
